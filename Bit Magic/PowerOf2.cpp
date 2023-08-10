@@ -3,25 +3,40 @@
 using namespace std;
 
 
-int countSetBits2(int num){
+bool isPowOf2(int num){
 
-  // Brian Kerningam's Algorithm
-    int count = 0;
+   //Naive Solution
 
-    while(num>0){
+  if(num == 0) return false;
+  while(num > 1){
 
-        num = (num & (num-1));
-        count++;
-    }
+    if(num % 2 !=0)
+     return false;
 
-    return count++;
+    num = num/2; 
+  }
+
+  return true;
 }
+
+bool isPowerOf2(int num){
+
+  //OPtimized Solution
+
+  if(num == 0) return false;
+
+  if((num & num-1)== 0) return true;
+  else return false;
+}
+
+
 int main(){
 
 
-  int setBits = countSetBits2(1024);
-
-  if(setBits == 1) {
-    cout << "Power of 2" ;
-  }else cout << "Not power of 2";
+  if(isPowerOf2(2050)){
+    cout << "Power of 2" << endl;
+  }
+  else{
+    cout << "Not power of 2" << endl;
+  }
 }
