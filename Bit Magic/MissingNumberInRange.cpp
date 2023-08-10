@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Program to find Missing number from given range
 
 int main(){
     int arr[] = {1,3,4,5};
