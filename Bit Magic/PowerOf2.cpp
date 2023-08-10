@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// Power Of 2
 
 bool isPowOf2(int num){
 
