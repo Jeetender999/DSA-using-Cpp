@@ -20,6 +20,8 @@ int secondLargestElement(int arr[], int n){
     return lar2;
 }
 int main(){
+
+    // Program to find second largest element in an array
     int arr[] = {10,10,10};
     int n = sizeof(arr)/sizeof(arr[0]);
 
