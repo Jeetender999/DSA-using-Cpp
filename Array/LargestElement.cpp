@@ -14,7 +14,7 @@ int largestElement(int arr[], int n){
     return lar;
 }
 int main(){
-    int arr[] = {34,2,3,55,2,35,22,3};
+    int arr[] = {34,2,3,55,2,35,22,3,4};
     int n = sizeof(arr)/sizeof(arr[0]);
 
     int lar = largestElement(arr,n);
