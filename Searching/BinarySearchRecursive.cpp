@@ -11,13 +11,17 @@ int binarySearch(int arr[], int start, int end, int ele)
     if (arr[mid] == ele)
         return mid;
 
-    if (arr[mid] < ele)
+    else if (arr[mid] < ele)
+    {
         start = mid + 1;
+        binarySearch(arr, start, end, ele);
+    }
 
-    if (arr[mid] > ele)
+    else if (arr[mid] > ele)
+    {
         end = mid - 1;
-
-    binarySearch(arr, start, end, ele);
+        binarySearch(arr, start, end, ele);
+    }
 }
 
 int main()
